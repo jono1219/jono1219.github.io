@@ -48,18 +48,29 @@
     <tr>
         <td></td>NOT A SCAM
         <td>Francisco Chang</td>
-        <td>USA/td>
+        <td>USA</td>
     </tr>
 </table>
 <button onclick="startDisco()">Start Disco</button>
 <script>
+    let discoInterval;
+
     function startDisco() {
-        document.body.classList.toggle('disco');
+        if (discoInterval) {
+            clearInterval(discoInterval);
+            discoInterval = null;
+            document.body.style.backgroundColor = '';
+        } else {
+            discoInterval = setInterval(() => {
+                const randomColor = `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
+                document.body.style.backgroundColor = randomColor;
+            }, 500);
+        }
     }
 </script>
 <style>
     .disco {
-        background-color: rgb(0, 247, 255);
+        background-color: rgb(0, 0, 255);
     }
 </style>
 <h2>The target Attribute</h2>
