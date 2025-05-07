@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head>
+        <meta charset="utf-8">
+        <style>
+        /* Remove default margin to prevent unwanted spacing */
+body {
+    margin: 0;
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main sidebar"
+        "footer footer";
+    grid-template-columns: 60% 20%; /* Tre kolumner */
+    grid-template-rows: auto auto auto; /* Tre rader */
+}
+
+/* Assigning areas */
+.header {
+    grid-area: header;
+    background: orange;
+    text-align: center;
+    padding: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: red;
+    padding: 10px;
+}
+
+.main-content {
+    grid-area: main;
+    background: lightblue;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background: lightgreen;
+    padding: 10px;
+}
+        
+
+        </style>
+        </head>
+
+
+
+<body>  
+<!-- Main Layout Container (Header, Sidebar, Main, Footer) -->
+<div class="container">
+
+    <!-- Header with Main Navigation -->
+    <div class="header">
+        <h1>Header</h1>
+        <p>Welcome to my website!</p>
+        <nav>
+            <a href="#">Home</a> |
+            <a href="#">About</a> |
+            <a href="#">Services</a> |
+            <a href="#">Blog</a> |
+            <a href="#">Contact</a>
+        </nav>
+    </div>
+
+    <!-- Sidebar Section with Navigation Links -->
+    <div class="sidebar">
+        <h3>Sidebar</h3>
+        <ul>
+            <li><a href="#">Subpage 1</a></li>
+            <li><a href="#">Subpage 2</a></li>
+            <li><a href="#">Subpage 3</a></li>
+        </ul>
+
+        <h3>Recent Posts</h3>
+        <ul>
+            <li><a href="#">Post 1</a></li>
+            <li><a href="#">Post 2</a></li>
+            <li><a href="#">Post 3</a></li>
+        </ul>
+    </div>
+
+
+    <!-- Main Content Area -->
+    <div class="main-content">
+        <h2>Main</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you want.</p>
+
+        <h3>Latest News</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et felis sit amet felis vestibulum
+            fermentum.</p>
+
+        <h3>Featured Article</h3>
+        <p>This is a sample featured article with a short description. <a href="#">Read more...</a></p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>&copy; Footer ❤️</p>
+    </div>
+
+
+
+</body>
+</html>

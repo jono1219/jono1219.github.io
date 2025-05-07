@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="sv">
+<head>
+    <style>
+* {
+    box-sizing: border-box;
+}
+
+/* Remove default margin to prevent unwanted spacing */
+body {
+    margin: 0;
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar section1 section2"
+        "sidebar section3 section4"
+        "footer footer footer";
+    grid-template-columns: 20% 40% 40%; /* Sidebar 20%, sections 40% each */
+    grid-template-rows: auto auto auto auto; /* Four rows */
+    gap: 10px; /* Adds 10px space between rows and columns */
+    height: 100vh; /* Full viewport height */
+}
+
+/* Assigning areas */
+.header {
+    grid-area: header;
+    background: red;
+    padding: 10px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: orange;
+    padding: 10px;
+}
+
+.section1 {
+    grid-area: section1;
+    background: lightblue;
+    padding: 10px;
+}
+
+.section2 {
+    grid-area: section2;
+    background: lightblue;
+    padding: 10px;
+}
+
+.section3 {
+    grid-area: section3;
+    background: lightblue;
+    padding: 10px;
+}
+
+.section4 {
+    grid-area: section4;
+    background: lightblue;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background: green;
+    text-align: center;
+    padding: 10px;
+}
+@media (max-width: 767px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "sidebar"
+            "section1"
+            "section2"
+            "section3"
+            "section4"
+            "footer";
+        grid-template-columns: 100%; /* One column for everything */
+        grid-template-rows: auto auto auto auto auto auto auto; /* Seven rows */
+    }
+}
+@media (max-width: 900px) {
+    .container {
+        grid-template-areas:
+            "header header"
+            "sidebar section1"
+            "sidebar section2"
+            "sidebar section3"
+            "sidebar section4"
+            "footer footer";
+        
+        grid-template-columns: 50%; /* One column for everything */
+        grid-template-rows: auto auto auto auto auto auto auto; /* Seven rows */
+    }
+}
+</style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <p> some content inside the header</p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <p>A sidebar here</p>
+        </div>
+
+        <!-- Section 1 -->
+        <div class="section1">
+            <p>Section 1</p>
+        </div>
+
+        <!-- Section 2 -->
+        <div class="section2">
+            <p>Section 2</p>
+        </div>
+
+        <!-- Section 3 -->
+        <div class="section3">
+            <p>Section 3</p>
+        </div>
+
+        <!-- Section 4 -->
+        <div class="section4">
+            <p>Section 4</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Some content inside the footer</p>
+        </div>
+    </div>
+</body>
+</html>

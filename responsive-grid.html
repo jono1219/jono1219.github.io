@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+
+/* Remove default margin to prevent unwanted spacing */
+body {
+    margin: 0;
+}
+
+/* Grid Container */
+.container {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "sidebar main"
+        "footer footer";
+    grid-template-columns: 20% 80%;
+    /* Two columns: 20% for sidebar, 80% for content */
+    grid-template-rows: auto auto auto;
+    /* Three rows: header, content, footer */
+}
+
+/* Assigning areas */
+.header {
+    grid-area: header;
+    background: red;
+    padding: 10px;
+}
+
+/* Flexbox for Header Navigation */
+.header nav {
+    display: flex;
+    justify-content: center;
+    /* Center the links */
+    gap: 20px;
+    /* Space out the links */
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #ddd;
+    padding: 10px;
+}
+
+.main-content {
+    grid-area: main;
+    background: #ccc;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #bbb;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Responsive adjustments (when screen width is 768px or less) */
+@media (max-width: 768px) {
+    .container {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 100%;
+        /* One column: 100% for everything */
+        grid-template-rows: auto auto auto auto;
+        /* Four rows: header, content, sidebar, footer */
+    }
+
+    /* Stack nav links vertically on smaller screens */
+    .header nav {
+        flex-direction: column;
+        /* Stack vertically */
+        gap: 10px;
+        /* Smaller gap */
+    }
+
+    /* Ensure the sidebar is at full width */
+    .sidebar {
+        width: 100%;
+    }
+
+    /* Ensure the main content is at full width */
+    .main-content {
+        width: 100%;
+    }
+}
+
+
+        </style>
+        </head>
+
+        <body>
+            <body>
+                <!-- Main Layout Container (Header, Sidebar, Main, Footer) -->
+                <div class="container">
+            
+                    <!-- Header with Main Navigation -->
+                    <div class="header">
+                        <p>some content inside the header</p>
+                        <nav>
+                            <a href="#">Home</a>
+                            <a href="#">About</a>
+                            <a href="#">Services</a>
+                            <a href="#">Blog</a>
+                            <a href="#">Contact</a>
+                        </nav>
+                    </div>
+            
+                    <!-- Sidebar Section with Navigation Links -->
+                    <div class="sidebar">
+                        <h3>Related Links</h3>
+                        <ul>
+                            <li><a href="#">Subpage 1</a></li>
+                            <li><a href="#">Subpage 2</a></li>
+                            <li><a href="#">Subpage 3</a></li>
+                        </ul>
+            
+                        <h3>Recent Posts</h3>
+                        <ul>
+                            <li><a href="#">Post 1</a></li>
+                            <li><a href="#">Post 2</a></li>
+                            <li><a href="#">Post 3</a></li>
+                        </ul>
+                    </div>
+            
+                    <!-- Main Content Area -->
+                    <div class="main-content">
+                        <h2>Welcome to My Website</h2>
+                        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+                            you want.</p>
+            
+                        <h3>Latest News</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce et felis sit amet felis vestibulum
+                            fermentum.</p>
+            
+                        <h3>Featured Article</h3>
+                        <p>This is a sample featured article with a short description. <a href="#">Read more...</a></p>
+                    </div>
+            
+                    <!-- Footer -->
+                    <div class="footer">
+                        <p>&copy; 2025 My Website | Designed with love ❤️</p>
+                    </div>
+                </div>
+            
+            </body>
+
+        </html>

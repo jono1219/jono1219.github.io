@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="utf-8">
+    <style>
+        /* Remove default margin to prevent unwanted spacing */
+        body {
+            margin: 0;
+        }
+
+        /* Grid Container */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "main sidebar2 sidebar"
+                "footer footer footer";
+            grid-template-columns: 60% 20% 20%; /* Three columns */
+            grid-template-rows: auto auto auto; /* Three rows */
+            height: 100vh; /* Full viewport height */
+        }
+
+        /* Assigning areas */
+        .header {
+            grid-area: header;
+            background: orange;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .main-content {
+            grid-area: main;
+            background: lightblue;
+            padding: 10px;
+        }
+
+        .sidebar2 {
+            grid-area: sidebar2;
+            background: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            background: red;
+            padding: 10px;
+        }
+
+        .footer {
+            grid-area: footer;
+            background: lightgreen;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Header</h1>
+            
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <h2  style="text-align:center;">main</h2>
+        </div>
+
+    
+        
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+         <h1  style="text-align:center;">sidebar</h1>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; Footer ❤️</p>
+        </div>
+    </div>
+</body>
+</html>
