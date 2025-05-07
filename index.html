@@ -4,7 +4,8 @@
 <head>
     <meta charset="utf-8">
     <style> 
-box-sizing: border-box;
+* {
+    box-sizing: border-box;
 }
 
 /* Remove default margin to prevent unwanted spacing */
@@ -17,11 +18,10 @@ body {
     display: grid;
     grid-template-areas:
         "header header"
-        "sidebar main"
-        "footer footer";
+        ;
     grid-template-columns: 20% 80%;
     /* Two columns: 20% for sidebar, 80% for content */
-    grid-template-rows: auto auto auto;
+    grid-template-rows: auto ;
     /* Three rows: header, content, footer */
 }
 
@@ -29,7 +29,11 @@ body {
 .header {
     grid-area: header;
     background: #bbb;
-    text-align: center;
+    padding: 10px;
+}
+.main-content {
+    grid-area: main;
+    background: #ccc;
     padding: 10px;
 }
 
@@ -40,8 +44,17 @@ body {
 
         <!-- Header with Main Navigation -->
         <div class="header">
-            <h1>logo</h1>
-            <p>Welcome to my website!</p>
+        <h1>Rubrik</h1>
+         <pre>logo   Products</pre>
+
+
+         <div class="main-content">
+            <h2>Welcome to My Website</h2>
+            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+                you want.</p>
+
+
+            
 
     </body>
 
