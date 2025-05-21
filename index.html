@@ -3,59 +3,155 @@
 
 <head>
     <meta charset="utf-8">
-    <style> 
-* {
-    box-sizing: border-box;
-}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-/* Remove default margin to prevent unwanted spacing */
-body {
-    margin: 0;
-}
+        /* Remove default margin to prevent unwanted spacing */
+        body {
+            margin: 0;
+        }
 
-/* Grid Container */
-.container {
-    display: grid;
-    grid-template-areas:
-        "header header"
-        ;
-    grid-template-columns: 20% 80%;
-    /* Two columns: 20% for sidebar, 80% for content */
-    grid-template-rows: auto ;
-    /* Three rows: header, content, footer */
-}
+        /* Grid Container */
+        .container {
+            display: grid;
+            grid-template-areas:
+                "header header"
+                "main1 sidebar"
+                "main2 main2"
+                "main3 main3"
+                "main4 main4"
+                "main5 main5"
+                "main6 main6"
+                "contact contact";
+            grid-template-columns: 80% 20% 40% 60%;
+            /* Two columns: 80% for main1, 20% for sidebar */
+            grid-template-rows: auto auto auto auto auto auto auto;
+            /* Three rows: header, main1+sidebar, main2 */
+        }
 
-/* Assigning areas */
-.header {
-    grid-area: header;
-    background: #bbb;
-    padding: 10px;
-}
-.main-content {
-    grid-area: main;
-    background: #ccc;
-    padding: 10px;
-}
+        /* Assigning areas */
+        .header {
+            grid-area: header;
+            background: #bbb;
+            padding: 10px;
+        }
 
-</style>
+        .main-content1 {
+            grid-area: main1;
+            /* Assign to main1 */
+            background: #ccc;
+            padding: 70px;
+        }
+
+        .sidebar {
+            grid-area: sidebar;
+            /* Assign to main2 */
+            background: #f91717;
+            padding: 70px;
+        }
+
+        .main-content2 {
+            grid-area: main2;
+            /* Assign to main3 */
+            background: #254be1;
+            padding: 70px;
+            height: 400px;
+        }
+        .main-content3 {
+            grid-area: main3;
+            /* Assign to main3 */
+            background: #e18925;
+            padding: 70px;
+        }
+        .main-content4 {
+            grid-area: main4;
+            /* Assign to main3 */
+            background: #25e196;
+            padding: 70px;
+            height: 350px;
+        }
+        .main-content5 {
+            grid-area: main5;
+            /* Assign to main3 */
+            background: #e12586;
+            padding: 70px;
+            height: 300px;
+        }
+        .main-content6{
+            grid-area: main6;
+            /* Assign to main3 */
+            background: #96e125;
+            padding: 70px;
+            height: 300px;
+        }
+        .contact{
+            grid-area: contact;
+            /* Assign to main3 */
+            background: #257de1;
+            padding: 70px;
+            height: 300px;
+        }
+    </style>
+</head>
 
 <body>
     <div class="container">
 
         <!-- Header with Main Navigation -->
         <div class="header">
-        <h1>Rubrik</h1>
-         <pre>logo   Products</pre>
+            <h1 style="text-align:center;">Rubrik för websida</h1>
+            <pre>logo   Products</pre>
+        </div>
 
-
-         <div class="main-content">
-            <h2>Welcome to My Website</h2>
+        <!-- Main Content1 -->
+        <div class="main-content1">
+            <h2 style="text-align:center;">Welcome</h2>
             <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
                 you want.</p>
+        </div>
 
+        <!-- sidebar -->
+        <div class="sidebar">
+            <h2 style="text-align:center;">Welcome</h2>
+            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+                you want.</p>
+        </div>
 
-            
+        <!-- Main Content2 -->
+        <div class="main-content2">
+            <h2 style="text-align:center;">Welcome</h2>
+            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+                you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+        </div>
 
-    </body>
+    <!-- Main Content3 -->
+    <div class="main-content3">
+        <h2 style="text-align:center;">Welcome</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+    </div>
+    <div class="main-content4">
+        <h2 style="text-align:center;">Welcome</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+    </div>
+    <div class="main-content5">
+        <h2 style="text-align:center;">Welcome</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+    </div>
+    <div class="main-content6">
+        <h2 style="text-align:center;">Welcome</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+    </div>
+    <div class="contact">
+        <h2 style="text-align:center;">Welcome</h2>
+        <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
+            you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+    </div>
+</body>
 
 </html>
