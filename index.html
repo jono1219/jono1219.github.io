@@ -3,97 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+     <link rel="stylesheet" href="css/webshop.css">
 
-        /* Remove default margin to prevent unwanted spacing */
-        body {
-            margin: 0;
-        }
-
-        /* Grid Container */
-        .container {
-            display: grid;
-            grid-template-areas:
-                "header header"
-                "main1 sidebar"
-                "main2 main2"
-                "main3 main3"
-                "main4 main4"
-                "main5 main5"
-                "main6 main6"
-                "contact contact";
-            grid-template-columns: 80% 20% 40% 60%;
-            /* Two columns: 80% for main1, 20% for sidebar */
-            grid-template-rows: auto auto auto auto auto auto auto;
-            /* Three rows: header, main1+sidebar, main2 */
-        }
-
-        /* Assigning areas */
-        .header {
-            grid-area: header;
-            background: #bbb;
-            padding: 10px;
-        }
-
-        .main-content1 {
-            grid-area: main1;
-            /* Assign to main1 */
-            background: #ccc;
-            padding: 70px;
-        }
-
-        .sidebar {
-            grid-area: sidebar;
-            /* Assign to main2 */
-            background: #f91717;
-            padding: 70px;
-        }
-
-        .main-content2 {
-            grid-area: main2;
-            /* Assign to main3 */
-            background: #254be1;
-            padding: 70px;
-            height: 400px;
-        }
-        .main-content3 {
-            grid-area: main3;
-            /* Assign to main3 */
-            background: #e18925;
-            padding: 70px;
-        }
-        .main-content4 {
-            grid-area: main4;
-            /* Assign to main3 */
-            background: #25e196;
-            padding: 70px;
-            height: 350px;
-        }
-        .main-content5 {
-            grid-area: main5;
-            /* Assign to main3 */
-            background: #e12586;
-            padding: 70px;
-            height: 300px;
-        }
-        .main-content6{
-            grid-area: main6;
-            /* Assign to main3 */
-            background: #96e125;
-            padding: 70px;
-            height: 300px;
-        }
-        .contact{
-            grid-area: contact;
-            /* Assign to main3 */
-            background: #257de1;
-            padding: 70px;
-            height: 300px;
-        }
-    </style>
 </head>
 
 <body>
@@ -101,29 +12,63 @@
 
         <!-- Header with Main Navigation -->
         <div class="header">
-            <h1 style="text-align:center;">Rubrik för websida</h1>
-            <pre>logo   Products</pre>
+            <h1 style="text-align:center;">Bluecore Builds</h1>
+           <a href="#logo">logo</a>
+           <p><a href="index.html">home</a></p>
+            <p><a href="index-product.html">Products</a></p>
+            <p><a href="index-about.html">about</a></p>
+            
         </div>
+        
 
         <!-- Main Content1 -->
         <div class="main-content1">
-            <h2 style="text-align:center;">Welcome</h2>
-            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
-                you want.</p>
+            <div class="game-ad">
+                <div class="ad-logo">
+            
+                    <span>🌊</span>
+                </div>
+                <h2><span class="ad-blue">dont know what kind of computer to </span> <span class="ad-white">GET</span><span class="ad-blue">?</span></h2>
+                <p class="ad-desc">Then look no further as our team will show exactly how much you really need to spend.</p>
+                <button class="ad-btn">Köp här</button>
+                <div class="ad-names">
+                    <div>
+                        <strong>Nikolas "blue" berg</strong><br>
+                        Techician
+                    </div>
+                    <div>
+                        <strong>Adrian "rull" strand</strong><br>
+                        Builder
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- sidebar -->
         <div class="sidebar">
-            <h2 style="text-align:center;">Welcome</h2>
-            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
-                you want.</p>
+            <img src="images/ad2.jpg" alt="en bild" class="sidebar-ad">
         </div>
 
         <!-- Main Content2 -->
         <div class="main-content2">
-            <h2 style="text-align:center;">Welcome</h2>
-            <p>This is where the main content of the page goes. You can add articles, blog posts, images, or anything
-                you wantmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm.</p>
+            <div class="card">
+                <div class="card-icon">🌍</div>
+                <h3>Global Shipping</h3>
+                <p>We ship all over the world at the best prices and with fast delivery.</p>
+                <a href="#" class="card-link">Read more</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">⚡</div>
+                <h3>Optimized Performance</h3>
+                <p>We optimize your computer for peak performance, removing unnecessary software and making it faster.</p>
+                <a href="#" class="card-link">Read more</a>
+            </div>
+            <div class="card">
+                <div class="card-icon">💻</div>
+                <h3>Custom Builds</h3>
+                <p>We create custom-built computers tailored to your needs, ensuring the best experience for gaming or work.</p>
+                <a href="#" class="card-link">Read more</a>
+            </div>
         </div>
 
     <!-- Main Content3 -->
