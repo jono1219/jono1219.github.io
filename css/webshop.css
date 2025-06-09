@@ -7,6 +7,13 @@
             margin: 0;
         }
 
+        html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+
         /* Grid Container */
         .container {
             display: grid;
@@ -14,22 +21,33 @@
                 "header header"
                 "main1 sidebar"
                 "main2 main2"
-                "main3 main3"
-                "main4 main4"
-                "main5 main5"
-                "main6 main6"
-                "contact contact";
-            grid-template-columns: 75% 25% 40% 60%;
-            /* Two columns: 80% for main1, 20% for sidebar */
-            grid-template-rows: auto auto auto auto auto auto auto;
-            /* Three rows: header, main1+sidebar, main2 */
+                "reviews reviews";
+            grid-template-columns: 75% 25%; /* Two columns: 75% for main1, 25% for sidebar */
+            grid-template-rows: auto auto auto auto auto; /* Adjust rows */
+            width: 100%;
+    min-height: 100vh;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+            background-color: #0a0c2c;
+            max-width: 1400px; /* Set a max-width that matches your header */
+    margin: 0 auto; /* This centers the container */
+    padding: 0 20px; /* Add some padding on the sides */
         }
 
-        /* Assigning areas */
+        /* Header Section */
         .header {
             grid-area: header;
-            background: #160239;
-            padding: 10px;
+            display: flex;
+            justify-content: space-between; /* Align items horizontally */
+            align-items: center; /* Center items vertically */
+            background-color: #160239;
+            padding: 20px;
+            color: white;
+        }
+
+        .header h1 {
+            margin: 0; /* Remove default margin */
+            font-size: 2rem;
         }
 
         .main-content1 {
@@ -59,49 +77,18 @@
 
         .main-content2 {
             grid-area: main2;
-            /* Assign to main3 */
-            background: #254be1;
-            padding: 70px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px; /* Changed to 20px */
+            background-color:#160239;  /* Changed to blue */
             height: 400px;
+           
         }
-        .main-content3 {
-            grid-area: main3;
-            /* Assign to main3 */
-            background: #e18925;
-            padding: 70px;
-        }
-        .main-content4 {
-            grid-area: main4;
-            /* Assign to main3 */
-            background: #25e196;
-            padding: 70px;
-            height: 350px;
-        }
-        .main-content5 {
-            grid-area: main5;
-            /* Assign to main3 */
-            background: #e12586;
-            padding: 70px;
-            height: 300px;
-        }
-        .main-content6{
-            grid-area: main6;
-            /* Assign to main3 */
-            background: #96e125;
-            padding: 70px;
-            height: 300px;
-        }
-        .contact{
-            grid-area: contact;
-            /* Assign to main3 */
-            background: #257de1;
-            padding: 70px;
-            height: 300px;
-        }
-        .header h1 {
-    color: white;
-}
-/* Ad style for main-content1 */
+       
+ 
+        
+        /* Ad style for main-content1 */
 .game-ad {
     background: linear-gradient(135deg, #0a0c2c 70%, #0a2c5d 100%);
     color: #fff;
@@ -179,16 +166,10 @@
         text-align: center;
     }
 }
-.main-content2 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-}
+
 
 .card {
-    background: #fff;
+    background: #160239; /* Changed to blue */
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 20px;
@@ -210,12 +191,12 @@
 .card h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
-    color: #333;
+    color: #fff; /* Changed to white */
 }
 
 .card p {
     font-size: 1rem;
-    color: #666;
+    color: #fff; /* Changed to white */
     margin-bottom: 15px;
 }
 
@@ -229,3 +210,224 @@
 .card-link:hover {
     text-decoration: underline;
 }
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #00aaff;
+}
+.reviews-section {
+    grid-area: reviews;
+    width: 100%;
+    padding: 40px 0;
+    background-color: #0a0c2c;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.reviews-section h2 {
+    font-size: 1.5rem; /* Adjust the font size */
+    color: #fff;
+    text-align: center;
+    margin-bottom: 80px; /* Reduce the margin */
+    padding: 0 50px;
+}
+
+/* Reviews Grid */
+.reviews {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns */
+    gap: 30px; /* Space between cards */
+    width: 100%; /* Make the grid span the full width */
+    max-width: 1200px; /* Optional: Limit the maximum width */
+    padding: 0 20px; /* Add padding for spacing */
+}
+
+/* Review Card Styling */
+.review-card {
+    background: #160239;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    height: 100%; /* Ensure cards stretch evenly */
+}
+
+.review-card p {
+    font-size: 1rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.review-author {
+    font-size: 0.9rem;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.review-author span {
+    font-size: 1.5rem; /* Slightly larger icon */
+}
+.product-showcase {
+    padding: 40px 0;
+    background-color: #0a0c2c;
+    width: 100%;
+    max-width: 1400px; /* Match container width */
+    margin: 0 auto;
+}
+
+.showcase-title {
+    text-align: center;
+    color: #fff;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px; /* Increased gap between items */
+    width: 90%; /* Take up most of the showcase width */
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.product-card {
+    background: #160239;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-image {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    width:250px;
+    
+}
+
+.product-info {
+    padding: 20px;
+}
+
+.product-info h3 {
+    color: #fff;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-description {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.product-link {
+    display: inline-block;
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.product-link:hover {
+    text-decoration: underline;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: #0a0c2c;
+    padding: 20px;
+}
+
+input[type="text"] {
+    margin: 10px 0;
+    padding: 8px;
+    width: 300px;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+label {
+    color: #fff;
+    margin-bottom: 5px;
+}
+
+input[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #00aaff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #0088cc;
+}
+form h2 {
+    color: white;
+}
+
+.container h2 {
+    color: white;
+    text-align: left;
+    margin-top: 50px;
+    margin-left: 20px; /* Add some spacing from the left */
+}
+
+.container p {
+    color: white;
+    text-align: left;
+    max-width: 800px;
+    margin: 20px;  /* Change from margin: 20px auto to just margin: 20px */
+    line-height: 1.6;
+ 
+
+}
+
+h2 {
+  text-align: left;
+}
+p {
+  text-align: left;
+}
+.buy-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.buy-button:hover {
+    background-color: #0056b3;
+}
+
