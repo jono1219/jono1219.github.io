@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sv">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sommarjobb i Sala</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <h1>Sommarjobb i Sala</h1>
+      <p class="tag">Hitta lokala sommarjobb — enkelt och gratis</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="controls">
+      <input id="search" type="search" placeholder="Sök jobb, företag eller plats...">
+      <select id="filter-location">
+        <option value="">Alla platser</option>
+      </select>
+      <select id="filter-type">
+        <option value="">Alla typer</option>
+        <option value="Deltid">Deltid</option>
+        <option value="Heltid">Heltid</option>
+        <option value="Timvik">Timvik</option>
+      </select>
+      <button id="refresh">Ladda om</button>
+    </section>
+
+    <section id="jobs" class="jobs-list"></section>
+
+    <template id="job-template">
+      <article class="job-card">
+        <h2 class="job-title"></h2>
+        <div class="meta">
+          <span class="company"></span>
+          <span class="location"></span>
+          <span class="type"></span>
+        </div>
+        <p class="description"></p>
+        <div class="actions">
+          <a class="apply" target="_blank">Ansök</a>
+        </div>
+      </article>
+    </template>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Gjort för Sala — © <span id="year"></span></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

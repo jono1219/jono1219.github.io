@@ -1,0 +1,282 @@
+/* **Färgschema (Professionell)** */
+:root {
+    --primary-dark: #1A2C5B;     /* Huvudfärg: Mörk Marinblå (Seriös) */
+    --accent-light: #38A3A5;     /* Accentfärg: Ljus Aquagrön (Fräsch) */
+    --text-color: #333;          /* Standard textfärg */
+    --bg-light: #F0F2F5;         /* Lätt, ren bakgrund */
+    --card-white: #FFFFFF;       /* Vit för kort */
+    --shadow-color: rgba(0, 0, 0, 0.08);
+}
+
+/* **Globala stilar och Återställning** */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Inter', sans-serif;
+    color: var(--primary-dark);
+    margin-top: 0;
+    font-weight: 700;
+}
+
+a {
+    text-decoration: none;
+    color: var(--accent-light);
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--primary-dark);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* **Header och Navigation** */
+header {
+    background-color: var(--card-white);
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.nav-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-weight: 700;
+    font-size: 1.2em;
+    color: var(--primary-dark);
+}
+
+nav a {
+    color: var(--primary-dark);
+    font-weight: 600;
+    margin-left: 30px;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+}
+
+nav a:hover {
+    color: var(--accent-light);
+    border-bottom: 2px solid var(--accent-light);
+}
+
+/* **Hero-Sektion (Huvudbanner)** */
+#hero {
+    background-color: var(--primary-dark); 
+    color: var(--card-white);
+    padding: 120px 20px;
+    text-align: center;
+}
+
+#hero h1 {
+    color: var(--card-white);
+    font-size: 3.5em;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+#hero h2 {
+    color: #C0C0C0;
+    font-size: 1.5em;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.subtitle {
+    font-weight: 600;
+    color: var(--accent-light);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.cta-button {
+    /* Gradient för en modern touch */
+    background: linear-gradient(90deg, #FFC300 0%, #FFA800 100%); 
+    color: var(--primary-dark);
+    padding: 14px 40px;
+    font-weight: 700;
+    border-radius: 8px;
+    letter-spacing: 0.5px;
+    transition: opacity 0.3s, transform 0.2s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button:hover {
+    opacity: 0.9; 
+    transform: translateY(-2px);
+}
+
+/* **Jobbkort-Sektion** */
+#jobb-lista {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+.section-header h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.job-card {
+    background-color: var(--card-white);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 12px var(--shadow-color);
+    border-top: 4px solid var(--accent-light); /* En ren accentlinje */
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.job-card h4 {
+    font-size: 1.4em;
+    margin-bottom: 10px;
+    color: var(--primary-dark);
+}
+
+.job-card p {
+    color: #666;
+    font-size: 0.95em;
+    margin-bottom: 20px;
+    min-height: 40px; /* För att hålla kortens höjd jämn */
+}
+
+.job-info {
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}
+.job-info span {
+    display: block;
+    font-size: 0.85em;
+    color: #555;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.tag {
+    display: inline-block;
+    background-color: #e0f2f1; /* Ljus bakgrund för taggen */
+    color: var(--accent-light);
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 10px !important;
+}
+
+.apply-link {
+    display: block;
+    margin-top: 20px;
+    color: var(--accent-light);
+    font-weight: 600;
+    border-bottom: 1px solid var(--accent-light);
+    padding-bottom: 2px;
+}
+
+.kontakt-prompt {
+    text-align: center;
+    margin-top: 60px;
+    font-size: 1.1em;
+    padding: 20px;
+    border: 1px dashed #ccc;
+    border-radius: 8px;
+    background-color: var(--card-white);
+}
+
+/* **Info-Sektion (Process)** */
+#info-sektion {
+    background-color: var(--bg-light);
+    padding: 60px 20px;
+    border-top: 1px solid #ddd;
+}
+
+#info-sektion h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.process-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    text-align: left;
+}
+
+.step {
+    flex: 1;
+    padding: 20px;
+    background-color: var(--card-white);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px var(--shadow-color);
+}
+
+.step-num {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: var(--accent-light);
+    display: block;
+    margin-bottom: 10px;
+}
+
+.step h3 {
+    font-size: 1.2em;
+    color: var(--primary-dark);
+}
+
+/* **Footer** */
+footer {
+    background-color: var(--primary-dark);
+    color: #aaa;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.8em;
+}
+
+/* **Responsivitet för mobil** */
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2.5em;
+    }
+    
+    .nav-links {
+        display: none; 
+    }
+
+    .process-grid {
+        flex-direction: column;
+    }
+    
+    .job-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    #hero {
+        padding: 80px 20px;
+    }
+}

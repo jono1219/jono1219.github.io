@@ -1,0 +1,103 @@
+:root {
+  --bg:#f6f8fb;
+  --card:#ffffff;
+  --accent:#0066cc;
+  --muted:#6b7280;
+}
+
+* { box-sizing:border-box; }
+
+body {
+  font-family: Inter, sans-serif;
+  margin: 0;
+  background: var(--bg);
+  color: #111;
+}
+
+.container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 16px;
+}
+
+.site-header {
+  background: linear-gradient(90deg, #0b61a4, #0d8bd8);
+  color: white;
+  padding: 28px 0;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.tag {
+  opacity: 0.9;
+  margin-top: 8px;
+}
+
+.controls {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin: 18px 0;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: white;
+}
+
+.jobs-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 12px;
+}
+
+.job-card {
+  background: var(--card);
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+.job-title {
+  margin: 0 0 6px 0;
+  font-size: 18px;
+}
+
+.meta {
+  color: var(--muted);
+  font-size: 13px;
+  display: flex;
+  gap: 8px;
+}
+
+.description {
+  margin: 10px 0;
+  color: #333;
+}
+
+.actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.actions .apply {
+  background: var(--accent);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+.site-footer {
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  margin-top: 28px;
+}

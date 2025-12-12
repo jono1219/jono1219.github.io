@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "title": "Butiksbiträde – ICA Sala",
+    "company": "ICA Sala",
+    "location": "Sala",
+    "description": "Vi söker ett positivt butiksbiträde över sommaren. Arbetstider dagtid.",
+    "applyURL": "https://example.com/ansok/1",
+    "employmentType": "Deltid"
+  },
+  {
+    "id": "2",
+    "title": "Trädgårdsarbete",
+    "company": "Sala Trädgårdsservice",
+    "location": "Sala",
+    "description": "Hjälp med gräsklippning och lättare trädgårdsarbete under sommaren.",
+    "applyURL": "",
+    "employmentType": "Heltid"
+  }
+]
